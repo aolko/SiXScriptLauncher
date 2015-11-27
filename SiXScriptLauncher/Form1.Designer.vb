@@ -33,7 +33,7 @@ Partial Class Main
         Me.six_path_script_label = New System.Windows.Forms.Label()
         Me.six_script_open = New System.Windows.Forms.Button()
         Me.six_path_script = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.six_launch_script = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
@@ -134,14 +134,14 @@ Partial Class Main
         Me.six_path_script.Size = New System.Drawing.Size(208, 20)
         Me.six_path_script.TabIndex = 1
         '
-        'Button1
+        'six_launch_script
         '
-        Me.Button1.Location = New System.Drawing.Point(9, 154)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(250, 29)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Launch script"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.six_launch_script.Location = New System.Drawing.Point(9, 154)
+        Me.six_launch_script.Name = "six_launch_script"
+        Me.six_launch_script.Size = New System.Drawing.Size(250, 29)
+        Me.six_launch_script.TabIndex = 4
+        Me.six_launch_script.Text = "Launch script"
+        Me.six_launch_script.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -161,9 +161,9 @@ Partial Class Main
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(6, 286)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 13)
+        Me.Label1.Size = New System.Drawing.Size(81, 13)
         Me.Label1.TabIndex = 6
-        Me.Label1.Text = "v1.0 by aolko"
+        Me.Label1.Text = "%ver% by aolko"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LinkLabel1
@@ -187,7 +187,7 @@ Partial Class Main
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.six_launch_script)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -214,7 +214,7 @@ Partial Class Main
     Friend WithEvents six_path_script_label As Label
     Friend WithEvents six_script_open As Button
     Friend WithEvents six_path_script As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents six_launch_script As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LinkLabel1 As LinkLabel

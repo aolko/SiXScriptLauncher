@@ -9,7 +9,7 @@
         Else
             ScriptPath = OpenFolder.SelectedPath.ToString()
             six_path_script.Text = ScriptPath
-            TextBox1.AppendText("Sikuli script path:" & Space(1) & ScriptPath)
+            TextBox1.AppendText("Sikuli script path:" & Space(1) & ScriptPath + vbNewLine)
         End If
 
     End Sub
@@ -21,7 +21,7 @@
         Else
             SikuliPath = OpenFolder.SelectedPath.ToString()
             six_path.Text = SikuliPath
-            TextBox1.AppendText("Sikuli path:" & Space(1) & SikuliPath & "\sikulix.jar")
+            TextBox1.AppendText("Sikuli path:" & Space(1) & SikuliPath & "\sikulix.jar" + vbNewLine)
         End If
 
     End Sub
@@ -36,23 +36,25 @@
             myProcess.StartInfo.CreateNoWindow = True
             myProcess.EnableRaisingEvents = True
             myProcess.Start()
+            six_launch_script.Enabled = False
             Dim output As String
             Dim SR As IO.StreamReader = myProcess.StandardOutput
             Do While SR.EndOfStream = False
-                output = output + SR.ReadLine()
+                output = output + SR.ReadLine() + vbNewLine
             Loop
             TextBox1.Text = output
+            six_launch_script.Enabled = True
         Catch ex As Exception
             Console.WriteLine((ex.Message))
         End Try
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles six_launch_script.Click
         Process_run()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Label1.Text = Label1.Text.Replace("%ver%", My.Application.Info.Version.Major.ToString + "." + My.Application.Info.Version.Minor.ToString + "." + My.Application.Info.Version.Build.ToString + Space(1))
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
