@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Main
     Public ScriptPath As String
     Public SikuliPath As String
 
@@ -56,7 +56,7 @@
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Dim webAddress As String = "http://www.github.com/"
+        Dim webAddress As String = "https://github.com/aolko/SiXScriptLauncher"
         Process.Start(webAddress)
     End Sub
 End Class
