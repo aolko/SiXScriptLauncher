@@ -1,4 +1,4 @@
-# SiXScriptLauncher
+# SiXScriptLauncher (SiXSL/SiXL/6L/6l/61)
 A more convinient way to launch your scripts outside of SikuliX
 
 ##Requirements
